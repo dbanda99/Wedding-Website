@@ -1,171 +1,93 @@
-/* Reset and Basic Setup */
+/* RESET & BASE */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    background-color: #f2f2f2;
-  }
-  
-  /* Header / Navigation */
-  header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    background: transparent;
-  }
-  
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Space between left (logo) and right placeholder */
-    padding: 20px;
-  }
-  
-  /* Left: Logo */
-  .nav-left {
-    flex: 1; /* Ensures logo stays on the far left */
-  }
-  .logo-image {
-    width: 60px; /* Adjust as needed */
-    height: auto;
-  }
-  
-  /* Center: Nav Links */
-  .nav-center {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* This centers the nav links horizontally */
-    align-items: center;
-    gap: 30px;
-  }
-  
-  /* Right: Empty or optional content */
-  .nav-right {
-    flex: 1;
-  }
-  
-  /* Clickable Links */
-  .nav-link {
-    position: relative;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  /* Hover effect: text to gray, animate white underline */
-  .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px; /* adjust vertical positioning */
-    height: 2px;
-    width: 0%;
-    background-color: #fff;
-    transition: width 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    color: #ccc;
-  }
-  .nav-link:hover::after {
-    width: 100%;
-  }
-  
-  /* Non-clickable text */
-  .nav-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    color: #fff;
-    /* No hover effect, no underline */
-  }
-  
-  /* Hero Section */
-  .hero {
-    position: relative;
-    height: 100vh;
-    background: url('https://picsum.photos/1300') center center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  /* Dark Overlay to make text more readable */
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-  }
-  
-  /* Hero Content */
-  .hero-content {
-    position: relative;
-    z-index: 1; /* Above overlay */
-    max-width: 700px;
-    padding: 0 20px;
-  }
-  
-  .hero-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  .hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .date {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
-  /* Countdown Text */
-  #countdown {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  /* Button Styling */
-  button {
-    background: transparent;
-    border: 2px solid #fff;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  button:hover {
-    background: #fff;
-    color: #000;
-  }
-  
-  /* Footer */
-  footer {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    background: #000;
-    color: #fff;
-    font-size: 0.9rem;
-  }
-  
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  z-index: 1000;
+  background: transparent;
+}
+.logo-image {
+  width: 50px;
+}
+.brand-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+/* DESKTOP NAV LINKS (right) */
+#desktopNav .nav-link {
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+#desktopNav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -3px;
+  width: 0; height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+#desktopNav .nav-link:hover {
+  color: #ccc;
+}
+#desktopNav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('https://picsum.photos/1600/900') center/cover no-repeat;
+  position: relative;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff !important;
+}
+.hero-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+}
+.hero-content h5 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+}
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* BUTTON */
+.btn-outline-light {
+  border-width: 2px;
+  padding: 0.5rem 1.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-outline-light:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* FOOTER OVERLAY */
+footer {
+  background: none;          /* fully transparent */
+  z-index: 2;                /* above the hero overlay */
+}
+.footer-text {
+  color: #fff !important;
+}

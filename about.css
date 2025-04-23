@@ -1,0 +1,95 @@
+/* RESET & BASE */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Open Sans', sans-serif;
+  /* hero image behind everything */
+  background: url('https://picsum.photos/seed/hero/1600/900') center/cover no-repeat fixed;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar-light .brand-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: white;
+}
+.navbar-light .nav-link {
+  color: #ffffff;
+  font-weight: 600;
+}
+.navbar-light .nav-link:hover {
+  color: #555;
+}
+
+
+
+/* Remove any grey—hero covers entire page */
+
+/* MAIN WHITE PANEL */
+.about-section {
+  margin: 0;
+  padding: 0;
+}
+.about-content {
+  position: relative;
+  margin: 100px auto 60px;
+  padding: 60px 30px 40px;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 16px;
+  border: 4px solid maroon;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+
+/* Avatar overlap */
+.hero-avatar {
+  width: 160px; height:160px;
+  border-radius:50%;
+  overflow:hidden;
+  border:5px solid maroon;
+  position: absolute;
+  top: 0; left:50%;
+  transform: translate(-50%, -50%);
+  background:#fff;
+}
+.hero-avatar img { width:100%; height:100%; object-fit:cover; }
+
+/* Title */
+.couple-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* Person block */
+.person-photo {
+  width: 140px; height:200px;
+  object-fit:cover;
+  border-radius:4px;
+}
+.person-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  border-bottom:1px solid #ddd;
+  padding-bottom:4px;
+  margin-bottom:16px;
+}
+.person-text {
+  font-weight:300;
+  line-height:1.6;
+  margin-bottom:1rem;
+}
+
+/* FOOTER */
+.sticky-footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+footer {
+  background: #ffffff;
+}
+.footer-text {
+  color: #ffffff;
+  font-size: 0.9rem;
+}

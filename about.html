@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – Fernanda &amp; David</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="about-mobi.css" />
+</head>
+<body>
+
+  <!-- STICKY NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-light bg-black bg-opacity-50 shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="data/logo.png" alt="Logo" class="logo-image me-2" width="40" height="40" />
+        <span class="brand-text">Fernanda &amp; David</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mobileNav"
+      >
+        <i class="bi bi-chevron-down"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="desktopNav">
+        <ul class="navbar-nav">
+          <li class="nav-item px-3"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="information.html">Information</a></li>
+        </ul>
+      </div>
+      <div class="collapse" id="mobileNav">
+        <ul class="navbar-nav bg-black bg-opacity-25 rounded-2 p-3 mt-2">
+          <li class="nav-item mb-2"><a class="nav-link text-center" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link text-center" href="information.html">Information</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN WHITE “LETTER” PANEL -->
+  <main class="about-section position-relative">
+    <div class="about-content mx-auto position-relative">
+      <!-- Avatar overlapping -->
+      <div class="hero-avatar mx-auto">
+        <img src="https://picsum.photos/seed/couple/300/300" alt="Fernanda & David">
+      </div>
+
+      <!-- Title -->
+      <h2 class="couple-name text-center mt-5">Fernanda &amp; David</h2>
+
+      <!-- Mrs. Fernanda -->
+      <div class="person mb-5 text-center">
+        <img
+          src="https://picsum.photos/seed/fernanda/180/240"
+          alt="Mrs. Fernanda Ochoa Castellanos"
+          class="person-photo mb-3"
+        >
+        <h3 class="person-name mb-3">Mrs. Fernanda Ochoa Castellanos</h3>
+        <p class="person-text">“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium…”</p>
+        <p class="person-text">“Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit…”</p>
+      </div>
+
+      <!-- Mr. David -->
+      <div class="person text-center">
+        <img
+          src="https://picsum.photos/seed/david/180/240"
+          alt="Mr. David Antonio Banda"
+          class="person-photo mb-3"
+        >
+        <h3 class="person-name mb-3">Mr. David Antonio Banda</h3>
+        <p class="person-text">“Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet…”</p>
+        <p class="person-text">“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam…”</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- STICKY FOOTER -->
+  <footer class="bg-black bg-opacity-50 text-center py-3 sticky-footer">
+    <span class="footer-text">&copy; <span id="year"></span> Fernanda &amp; David Banda</span>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('year').innerText = new Date().getFullYear();</script>
+  <!-- about.js -->
+  <script src="about.js"></script>
+</body>
+</html>

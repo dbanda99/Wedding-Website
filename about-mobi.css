@@ -1,0 +1,51 @@
+@media (max-width: 767.98px) {
+    /* Hide desktop links */
+    #desktopNav {
+      display: none !important;
+    }
+  
+    /* Always show the toggler */
+    .navbar-toggler {
+      display: block !important;
+    }
+  
+    /* Mobile dropdown: full-screen width, 50% black overlay */
+    #mobileNav {
+      position: absolute;
+      top: 100%;         /* just below the navbar */
+      left: 0;
+      width: 100vw;      /* full viewport width */
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  
+    /* Make the UL itself full width with no extra rounding */
+    #mobileNav .navbar-nav {
+      width: 100%;
+      margin: 0;
+      padding: 1rem 0;
+      background: transparent;
+      border-radius: 0;
+    }
+  
+    /* Each link fills the width, centered text, white on black */
+    #mobileNav .nav-link {
+      display: block;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      color: #ffffff !important;
+      transition: background 0.3s;
+    }
+    #mobileNav .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .navbar-toggler {
+        border: 1px solid #fff !important;
+      }
+    .navbar-toggler i.bi {
+        color: #fff;
+    }
+  }
+  

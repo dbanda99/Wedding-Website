@@ -1,0 +1,44 @@
+@media (max-width: 767.98px) {
+    /* Hide desktop nav links */
+    #desktopNav {
+      display: none !important;
+    }
+  
+    /* Always show the toggler */
+    .navbar-toggler {
+      display: block !important;
+    }
+  
+    /* Position the mobile menu absolutely, 100% wide */
+    #mobileNav {
+      position: absolute;
+      top: calc(100% + 0.5rem); /* just below the navbar */
+      left: 0;
+      width: 100vw;
+      z-index: 1001;
+    }
+  
+    /* Make the UL itself full width & remove side rounding */
+    #mobileNav .navbar-nav {
+      width: 100%;
+      margin: 0;
+      padding: 0.5rem 0;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 0;
+    }
+  
+    /* Style each link to fill the width */
+    #mobileNav .nav-link {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+      color: #fff !important;
+      transition: background 0.3s;
+    }
+  
+    #mobileNav .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+  }
+  
